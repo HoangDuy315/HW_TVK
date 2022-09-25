@@ -1,0 +1,112 @@
+body {
+    background: rgb(219, 224, 172);
+}
+
+.bdy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    margin: 50px;
+    /* box-shadow: 0 50px 70px rgba(0, 0, 0, 0.1); */
+    border-left: 50px solid #fff;
+    border-right: 50px solid #fff;
+
+}
+
+.container .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.container .top .imgbx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .imgbx .box {
+    position: relative;
+    width: 70%;
+    min-width: 200px;
+    border-radius: 50%;
+}
+
+.container .contentBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.duy {
+    color: blue;
+    position: relative;
+    width: 70%;
+    min-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .top .profile {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .profile h3 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #333;
+}
+
+.container .top .profile h3 span {
+    position: relative;
+    font-size: 0.5em;
+    font-weight: 300;
+    top: -10px;
+}
+
+.checked {
+    color: orange;
+}
+
+.yud {
+    text-align: center;
+}
+
+.yud .li {
+    text-align: center;
+}
+
+.hi {
+
+    text-align: center;
+}
+
+.fs {
+    font-size: 20px;
+    list-style: none;
+    font-family: "Roboto" sans-serif;
+    font-weight: bold;
+    color: orange;
+}
+
+.detail {
+    padding: 5px;
+}
+
+.name {
+    text-align: center;
+}
+

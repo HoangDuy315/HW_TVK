@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(219, 228, 136);
+}
+
+.duy {
+    color: blue;
+    height: 380px;
+    width: 400px;
+}
+
+.checked {
+    color: orange;
+}
+
+.yud {
+    text-align: center;
+}
+
+.yud .li {
+    text-align: center;
+}
+
+.hi {
+
+    text-align: center;
+}
+
+.fs {
+    font-size: 20px;
+}
+
+.but {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    /* font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    /* background: #1e90ff; */
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff; */
+    border-radius: 20px;
+}
