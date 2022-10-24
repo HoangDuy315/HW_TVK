@@ -51,6 +51,7 @@ body {
   height: 100vh;
   background: #ff8bb3;
   transition: 0.5s;
+  margin-top: 50px;
 }
 
 #sidebar.active {
@@ -59,7 +60,7 @@ body {
 
 #sidebar ul {
   position: relative;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 #sidebar ul li {

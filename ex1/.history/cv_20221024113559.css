@@ -53,13 +53,9 @@ body {
   transition: 0.5s;
 }
 
-#sidebar.active {
-  left: 0px;
-}
-
 #sidebar ul {
   position: relative;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 #sidebar ul li {

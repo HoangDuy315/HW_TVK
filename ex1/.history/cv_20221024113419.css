@@ -46,20 +46,16 @@ body {
 #sidebar {
   position: fixed;
   top: 0;
-  left: -170px;
+  left: 0;
   width: 170px;
   height: 100vh;
   background: #ff8bb3;
   transition: 0.5s;
 }
 
-#sidebar.active {
-  left: 0px;
-}
-
 #sidebar ul {
   position: relative;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 #sidebar ul li {
