@@ -1,8 +1,13 @@
-import _ from "lodash";
-import React from "react";
-import "./Piano.css";
-import { Key } from "./Key.js";
-import { NOTES, VALID_KEYS, KEY_TO_NOTE } from "../global/data";
+import _ from 'lodash';
+import React from 'react';
+
+import './Piano.css';
+import { Key } from './Key.js'
+import {
+  NOTES,
+  VALID_KEYS,
+  KEY_TO_NOTE,
+} from '../global/constants';
 
 class Piano extends React.Component {
   constructor(props) {
@@ -17,7 +22,7 @@ class Piano extends React.Component {
       const noteAudio = new Audio(document.getElementById(note).src);
       noteAudio.play();
     }
-  };
+  }
 
   handleKeyDown = (event) => {
     if (event.repeat) {
@@ -32,37 +37,51 @@ class Piano extends React.Component {
       pressedKeys: updatedPressedKeys,
     });
     this.playNote(KEY_TO_NOTE[key]);
-  };
+  }
 
   handleKeyUp = (event) => {
     const index = this.state.pressedKeys.indexOf(event.key);
     if (index > -1) {
-      this.setState((state) => ({
-        pressedKeys: state.pressedKeys.splice(index, 1),
+      this.setState(state => ({
+        pressedKeys: state.pressedKeys.splice(index, 1)
       }));
     }
-  };
+  }
 
   componentDidMount = () => {
-    window.addEventListener("keydown", this.handleKeyDown);
-    window.addEventListener("keyup", this.handleKeyUp);
-  };
+    window.addEventListener('keydown', this.handleKeyDown);
+    window.addEventListener('keyup', this.handleKeyUp);
+  }
 
   render() {
     const keys = _.map(NOTES, (note, index) => {
       return (
-        <Key key={index} note={note} pressedKeys={this.state.pressedKeys} />
+        <Key
+          key={index}
+          note={note}
+          pressedKeys={this.state.pressedKeys}
+        />
       );
     });
 
     const audioFiles = _.map(NOTES, (note, index) => {
-      return <audio id={note} key={index} src={`../../notes/${note}.mp3`} />;
+      return (
+        <audio
+          id={note}
+          key={index}
+          src={`../../notes/${note}.mp3`}
+        />
+      );
     });
 
     return (
       <div>
-        <div className="piano">{keys}</div>
-        <div>{audioFiles}</div>
+        <div className="piano">
+          {keys}
+        </div>
+        <div>
+          {audioFiles}
+        </div>
       </div>
     );
   }

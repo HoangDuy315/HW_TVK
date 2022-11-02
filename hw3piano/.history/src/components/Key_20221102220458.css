@@ -1,7 +1,7 @@
 .key {
   background-color: white;
   height: 300px;
-  width: 90px;
+  width: 60px;
   border: 2px solid black;
 }
 
@@ -17,7 +17,7 @@
 
 .key.pressed,
 .key.flat.pressed {
-  background-color: #f3f716;
+  background-color: #00d8ff;
 }
 
 .key-text {

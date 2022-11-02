@@ -5,10 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Press a to h to play node major <br /> and press w, e, t, y, u to play
-          flat chord
-        </p>
+        <p>Press a -> h to play</p>
         <Piano />
       </header>
     </div>

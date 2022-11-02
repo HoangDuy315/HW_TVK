@@ -1,7 +1,7 @@
 .key {
   background-color: white;
   height: 300px;
-  width: 90px;
+  width: 100px;
   border: 2px solid black;
 }
 
@@ -11,7 +11,7 @@
   margin-left: -17px;
   margin-right: -17px;
   height: 200px;
-  width: 30px;
+  width: 80px;
   z-index: 2;
 }
 

@@ -22,9 +22,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(217, 49, 49);
-  margin-top: -20px;
-  font-size: 30px;
-  font-weight: bold;
 }
 
 .App-link {
