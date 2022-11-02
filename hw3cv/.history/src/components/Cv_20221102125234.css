@@ -1,0 +1,340 @@
+/* body {
+  background: rgb(219, 224, 172);
+} */
+
+#toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #03a9f4;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+#toggle::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -170px;
+  width: 170px;
+  height: 100vh;
+  background: #ff8bb3;
+  transition: 0.5s;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul {
+  position: relative;
+  margin-top: 130px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 30px;
+  margin-left: -35px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+#sidebar ul li:hover {
+  transform: scale(1.3);
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-style: 1.5em;
+  letter-spacing: 2px;
+}
+
+/* =========================================================== */
+.bdy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  margin: 50px;
+  /* box-shadow: 0 50px 70px rgba(0, 0, 0, 0.1); */
+  border-left: 50px solid #fff;
+  border-right: 50px solid #fff;
+}
+
+.container .top {
+  position: relative;
+  /* display: grid; */
+  grid-template-columns: 1fr 2fr;
+}
+
+.container .top .imgbx {
+  position: relative;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin-left: 330px;
+  margin-top: 20px;
+}
+
+.profile {
+  margin-left: 215px;
+}
+
+.profile span {
+  margin-left: 150px;
+}
+
+.container .top .imgbx .box {
+  position: relative;
+  width: 70%;
+  min-width: 200px;
+  border-radius: 50%;
+}
+
+.container .contentBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 40px 40px;
+  margin-top: 50px;
+}
+
+.container .contentBox h3 {
+  border-left: 4px solid #ff8bb3;
+  padding-left: 10px;
+  line-height: 1em;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.1em;
+}
+
+.container .contentBox ul {
+  position: relative;
+  margin: 10px 0;
+}
+
+.container .contentBox ul li {
+  list-style: none;
+  margin: 25px 0;
+  line-height: 1em;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+}
+
+.container .contentBox ul li ion-icon {
+  font-size: 1.2em;
+  margin-right: 10px;
+  color: #3590d2;
+}
+
+.icon {
+  color: #3590d2;
+}
+
+.text {
+  margin-left: 10px;
+}
+
+.container .contentBox ul.education li {
+  flex-direction: column;
+  margin: 20px 0;
+  line-height: -3px;
+}
+h5 {
+  color: #3590d2;
+}
+h4 {
+  color: #333;
+  font-weight: 500;
+  margin: 5px 0;
+}
+h6 {
+  margin-top: 20px;
+  color: #666;
+  font-weight: 300;
+  font-size: 1em;
+}
+.language li {
+  flex-direction: column;
+}
+.language li span {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.language .percent {
+  position: relative;
+  width: 100%;
+  background: #e3e3e3;
+  height: 6px;
+  margin-top: 15px;
+  display: block;
+  overflow: hidden;
+}
+
+.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #3590d2;
+}
+
+.wi {
+  width: 100%;
+}
+
+.wi2 {
+  width: 90%;
+}
+.container .contentBox ul.interest {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .contentBox ul.interest li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.container .contentBox ul.interest li .icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #3590d2;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .contentBox ul.interest li .icon ion-icon {
+  color: #fff;
+  margin-right: 0;
+}
+p {
+  font-style: 300;
+}
+.rightSide {
+  padding-left: 200px;
+}
+
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 40px;
+}
+.about .box .year_company {
+  min-width: 150px;
+  margin-bottom: 10px;
+}
+.about .box .year_company .h5:nth-child(1) {
+  color: #3590d2;
+}
+.about .box .text h4 {
+  color: #3590d2;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.about_skill .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.about_skill .box h4 {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.about_skill .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #e3e3e3;
+}
+.about_skill .box .percent div {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #3590d2;
+}
+
+.duy {
+  color: blue;
+  position: relative;
+  width: 70%;
+  min-width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container .top .profile {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.container .top .profile h3 {
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  font-weight: 600;
+  color: #333;
+}
+
+.container .top .profile h3 span {
+  position: relative;
+  font-size: 0.5em;
+  font-weight: 300;
+  top: -10px;
+}
